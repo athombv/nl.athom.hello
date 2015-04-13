@@ -1,0 +1,80 @@
+{
+  "id": "nl.athom.hello",
+  "version": "1.0.0",
+  "name": {
+    "en": "Hello World!",
+    "nl": "Hallo wereld"
+  },
+  "description": {
+    "en": "Example app for Homey 123",
+    "nl": "Dit is een voorbeeld :)",
+    "fr": "baguette?"
+  },
+  "author": {
+    "name": "Emile Nijssen",
+    "email": "homey@weejewel.net"
+  },
+  "dependencies": {
+    "socket.io": "^1.1.0"
+  },
+  "permissions": [],
+  "interfaces": {
+    "speech": {
+      "triggers": [
+        {
+          "id": "hello",
+          "importance": 0.6,
+          "synonyms": {
+            "en": [
+              "hello",
+              "hi",
+              "hey",
+              "hullo",
+              "fffewfewfewf",
+              "fefef",
+              "eed"
+            ]
+          }
+        }
+      ]
+    },
+    "mobile": {
+      "css": [
+        {
+          "text": "foo.css"
+        },
+        {
+          "text": "bar.css"
+        }
+      ],
+      "js": [
+        {
+          "text": "foo.js"
+        },
+        {
+          "text": "jquery.js"
+        }
+      ]
+    }
+  },
+  "flow": {
+    "triggers": [
+      {
+        "method": "foo",
+        "title": {
+          "en": "bar",
+          "nl": "baar"
+        },
+        "args": [
+          {
+            "name": "youtube_id",
+            "type": "autocomplete",
+            "placeholder": {
+              "en": "Find a YouTube video..."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
