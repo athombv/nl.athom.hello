@@ -14,6 +14,7 @@ App.prototype.init = function(){
 	Homey.manager('ledring').animate({
 		name: 'pulse'
 	});
+  
 };
 
 App.prototype.events = {
