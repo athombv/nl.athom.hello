@@ -17,7 +17,10 @@
     "dependencies": {
         "socket.io": "^1.1.0"
     },
-    "permissions": [],
+    "permissions": [
+	    "homey:manager:speech-output",
+	    "homey:manager:speech-ledring"
+    ],
     "speech": [
         {
             "id": "hello",
