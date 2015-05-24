@@ -1,80 +1,54 @@
 {
-  "id": "nl.athom.hello",
-  "version": "1.0.0",
-  "name": {
-    "en": "Hello World!",
-    "nl": "Hallo wereld"
-  },
-  "description": {
-    "en": "Example app for Homey 123",
-    "nl": "Dit is een voorbeeld :)",
-    "fr": "baguette?"
-  },
-  "author": {
-    "name": "Emile Nijssen",
-    "email": "homey@weejewel.net"
-  },
-  "dependencies": {
-    "socket.io": "^1.1.0"
-  },
-  "permissions": [],
-  "interfaces": {
-    "speech": {
-      "triggers": [
-        {
-          "id": "hello",
-          "importance": 0.6,
-          "synonyms": {
-            "en": [
-              "hello",
-              "hi",
-              "hey",
-              "hullo",
-              "fffewfewfewf",
-              "fefef",
-              "eed"
-            ]
-          }
-        }
-      ]
+    "id": "nl.athom.hello",
+    "version": "1.0.0",
+    "name": {
+        "en": "Hello World!",
+        "nl": "Hallo wereld"
     },
-    "mobile": {
-      "css": [
+    "description": {
+        "en": "Example app for Homey 123",
+        "nl": "Dit is een voorbeeld :)",
+        "fr": "baguette?"
+    },
+    "author": {
+        "name": "Emile Nijssen",
+        "email": "homey@weejewel.net"
+    },
+    "dependencies": {
+        "socket.io": "^1.1.0"
+    },
+    "permissions": [],
+    "speech": [
         {
-          "text": "foo.css"
-        },
-        {
-          "text": "bar.css"
-        }
-      ],
-      "js": [
-        {
-          "text": "foo.js"
-        },
-        {
-          "text": "jquery.js"
-        }
-      ]
-    }
-  },
-  "flow": {
-    "triggers": [
-      {
-        "method": "foo",
-        "title": {
-          "en": "bar",
-          "nl": "baar"
-        },
-        "args": [
-          {
-            "name": "youtube_id",
-            "type": "autocomplete",
-            "placeholder": {
-              "en": "Find a YouTube video..."
+            "id": "hello",
+            "importance": 0.6,
+            "synonyms": {
+                "en": [
+                    "hello",
+                    "hi",
+                    "hey"
+                ]
             }
-          }
+        }
+    ],
+    "flow": {
+        "triggers": [
+            {
+                "method": "example_trigger",
+                "title": {
+                    "en": "Example Trigger",
+                    "nl": "Voorbeeld Trigger"
+                },
+                "args": [
+                    {
+                        "name": "input",
+                        "type": "text",
+                        "placeholder": {
+                            "en": "Enter something..."
+                        }
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  }
+    }
 }

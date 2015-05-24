@@ -9,7 +9,9 @@ module.exports = App;
 
 App.prototype.init = function(){
 	
-	console.log('init');
+  	setInterval(function(){
+		Homey.log('Hi!');
+	}, 1000);
 	
 	Homey.manager('ledring').animate({
 		name: 'pulse'
@@ -17,13 +19,6 @@ App.prototype.init = function(){
   
 };
 
-App.prototype.events = {
-	speech: function( speech ) {
-		Homey.say( __("hallo") );
-	}
-};
-
-function foo() {}
-
-while (1)
-  foo();
+App.prototype.speech = function( speech ) {
+	Homey.say( __("hello") );
+}
