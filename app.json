@@ -14,9 +14,6 @@
         "name": "Emile Nijssen",
         "email": "homey@weejewel.net"
     },
-    "dependencies": {
-        "socket.io": "^1.1.0"
-    },
     "permissions": [
 	    "homey:manager:speech-output",
 	    "homey:manager:speech-ledring"

@@ -20,5 +20,5 @@ App.prototype.init = function(){
 };
 
 App.prototype.speech = function( speech ) {
-	Homey.say( __("hello") );
+	Homey.manager('speech-output').say( "hello" );
 }
