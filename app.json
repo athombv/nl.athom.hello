@@ -1,6 +1,8 @@
 {
   "id": "nl.athom.hello",
   "version": "1.0.0",
+  "compatibility": "0.x",
+  "category": "services",
   "name": {
     "en": "Hello World!",
     "nl": "Hallo wereld"
@@ -14,13 +16,10 @@
     "name": "Emile Nijssen",
     "email": "homey@weejewel.net"
   },
-  "dependencies": {
-    "socket.io": "^1.1.0"
-  },
   "permissions": [
-    "homey:manager:speech-ledring",
     "homey:manager:speech-input",
-    "homey:manager:speech-output"
+    "homey:manager:speech-output",
+    "homey:app:nl.philips.hue"
   ],
   "speech": [
     {
@@ -38,7 +37,7 @@
   "flow": {
     "triggers": [
       {
-        "method": "example_trigger",
+        "id": "example_trigger",
         "title": {
           "en": "Example Trigger",
           "nl": "Voorbeeld Trigger"
@@ -56,7 +55,7 @@
     ],
     "actions": [
       {
-        "method": "example_action",
+        "id": "example_action",
         "title": {
           "en": "Example Action",
           "nl": "Voorbeeld Actie"
