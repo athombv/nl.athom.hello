@@ -1,24 +1,19 @@
 "use strict";
-  
-function App() 
-{
-	
-}
 
-module.exports = App;
-
-App.prototype.init = function(){
+var self = module.exports = {
 	
-  	setInterval(function(){
-		Homey.log('Hi!');
-	}, 1000);
+	init: function(){		
+		
+		// when this app has been triggered on speech
+		Homey.manager('speech-input').on('speech', function( speech ){
+			
+			Homey.log('onSpeech', speech);
+			
+			// say something back
+			Homey.manager("speech-output").say( __("hello") );
+			
+		});
 	
-	Homey.manager('ledring').animate({
-		name: 'pulse'
-	});
-  
+	}
+	
 };
-
-App.prototype.speech = function( speech ) {
-	Homey.manager('speech-output').say( "hello" );
-}

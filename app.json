@@ -1,75 +1,36 @@
 {
-  "id": "nl.athom.hello",
-  "version": "1.0.0",
-  "compatibility": "0.x",
-  "category": "services",
-  "name": {
-    "en": "Hello World!",
-    "nl": "Hallo wereld"
-  },
-  "description": {
-    "en": "Example app for Homey 123",
-    "nl": "Dit is een voorbeeld :)",
-    "fr": "baguette?"
-  },
-  "author": {
-    "name": "Emile Nijssen",
-    "email": "homey@weejewel.net"
-  },
-  "permissions": [
-    "homey:manager:speech-input",
-    "homey:manager:speech-output",
-    "homey:app:nl.philips.hue"
-  ],
-  "speech": [
-    {
-      "id": "hello",
-      "importance": 0.6,
-      "synonyms": {
-        "en": [
-          "hello",
-          "hi",
-          "hey"
-        ]
-      }
-    }
-  ],
-  "flow": {
-    "triggers": [
-      {
-        "id": "example_trigger",
-        "title": {
-          "en": "Example Trigger",
-          "nl": "Voorbeeld Trigger"
-        },
-        "args": [
-          {
-            "name": "input",
-            "type": "text",
-            "placeholder": {
-              "en": "Enter something..."
-            }
-          }
-        ]
-      }
+    "id": "nl.athom.hello",
+    "version": "1.0.0",
+    "compatibility": "0.x || 1.x",
+    "category": "internet",
+    "name": {
+        "en": "Hello World!",
+        "nl": "Hallo wereld!"
+    },
+    "description": {
+        "en": "Example app for Homey",
+        "nl": "Dit is een voorbeeld :)",
+        "fr": "baguette?"
+    },
+    "author": {
+        "name": "Emile Nijssen",
+        "email": "emile@athom.nl"
+    },
+    "permissions": [
+        "homey:manager:speech-input",
+        "homey:manager:speech-output"
     ],
-    "actions": [
-      {
-        "id": "example_action",
-        "title": {
-          "en": "Example Action",
-          "nl": "Voorbeeld Actie"
-        },
-        "args": [
-          {
-            "name": "input",
-            "type": "text",
-            "placeholder": {
-              "en": "Enter something..."
+    "speech": [
+        {
+            "id": "hello",
+            "importance": 0.6,
+            "triggers": {
+                "en": [
+                    "hello",
+                    "hi",
+                    "hey"
+                ]
             }
-          }
-        ]
-      }
+        }
     ]
-  }
 }
