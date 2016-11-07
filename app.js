@@ -10,7 +10,7 @@ var self = module.exports = {
 			Homey.log('onSpeech', speech);
 			
 			// say something back
-			Homey.manager("speech-output").say( __("hello") );
+			speech.say( __("hello") );
 			
 		});
 	
